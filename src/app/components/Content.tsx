@@ -2,12 +2,11 @@ import PrimaryLinkButton from "./buttons/PrimaryLinkButton";
 
 const Content = ({ content }: { content: string }) => {
   return (
-    <main
+    <div
       style={{
         display: "flex",
         flexDirection: "column",
         padding: "30px",
-        height: "90vh",
         alignItems: "center",
         justifyContent: "center",
         background: "white",
@@ -15,7 +14,7 @@ const Content = ({ content }: { content: string }) => {
     >
       <PrimaryLinkButton label={"Home page"} href={"/"} />
       <p>{content}</p>
-    </main>
+    </div>
   );
 };
 export default Content;
