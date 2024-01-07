@@ -29,6 +29,7 @@ export default function Home() {
           href="/buildTimeGeneration"
           label="Go to build time rendering page"
         />
+        <PrimaryLinkButton href="/normal" label="Go to normal page" />
       </div>
     </main>
   );

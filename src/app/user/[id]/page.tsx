@@ -1,18 +1,11 @@
-import Content from "@components/Content";
 import PrimaryLinkButton from "@components/buttons/PrimaryLinkButton";
 import { APP_ID, BASE_URL } from "@components/env";
+import { UserInterface } from "@components/types/user";
 import axios from "axios";
 
-interface UserInterface {
-  id: string;
-  title: string;
-  firstName: string;
-  lastName: string;
-  picture: string;
-}
 export async function generateStaticParams() {
   const users = await axios
-    .get(`${BASE_URL}/user`, { headers: { "app-id": APP_ID } })
+    .get(`${BASE_URL}/user?limit=10`, { headers: { "app-id": APP_ID } })
     .then(({ data }) => {
       return data;
     });
@@ -28,7 +21,7 @@ const getUserById = async (id: string) => {
   console.log("user getUserById", user);
   return user;
 };
-export const getAllUsers = async () => {};
+
 const UserIdPage = async ({ params }: { params: { id: string } }) => {
   const user: UserInterface = await getUserById(params.id);
   console.log("console content", user); // NOTE : this will be logged in the server console
