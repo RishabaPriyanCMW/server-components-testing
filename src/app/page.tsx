@@ -21,14 +21,14 @@ export default function Home() {
           href="/serverComponents"
           label="go to server components page"
         />
-        <PrimaryLinkButton
+        {/* <PrimaryLinkButton
           href="/serverSideRendering"
           label="go to server side rendering page"
         />
         <PrimaryLinkButton
           href="/buildTimeGeneration"
           label="Go to build time rendering page"
-        />
+        /> */}
         <PrimaryLinkButton href="/normal" label="Go to normal page" />
       </div>
     </main>
