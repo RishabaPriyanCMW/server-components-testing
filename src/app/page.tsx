@@ -1,6 +1,6 @@
+"use client";
 import PrimaryLinkButton from "@components/buttons/PrimaryLinkButton";
 
-`use client`;
 export default function Home() {
   return (
     <main style={{ height: "90vh" }}>

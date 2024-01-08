@@ -1,4 +1,4 @@
-`use client`;
+"use client";
 import Content from "@components/Content";
 import PrimaryLinkButton from "@components/buttons/PrimaryLinkButton";
 import { APP_ID, BASE_URL } from "@components/env";
@@ -12,6 +12,7 @@ const NormalPage = async () => {
     .then(({ data }) => {
       return data;
     });
+  if (!users) return <div>loading...</div>;
   return (
     <div>
       {users.data.map((user: UserInterface, index: number) => {
